@@ -10,7 +10,7 @@
         <!--To-Do List-->
         <scene sceneID="vDs-Ee-FwM">
             <objects>
-                <tableViewController id="Vz5-kd-1VG" sceneMemberID="viewController">
+                <tableViewController id="Vz5-kd-1VG" customClass="TableViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T30-k7-KqZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To-Do List" id="h81-Uw-BSI">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="9R0-5a-EL9"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="9R0-5a-EL9">
+                            <connections>
+                                <action selector="saveTask:" destination="Vz5-kd-1VG" id="NvH-HR-l0r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUF-kQ-T7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
